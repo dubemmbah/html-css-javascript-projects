@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #d9daac;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 3rem;
+  margin-top: 1rem;
+}
+
+.box {
+  background-color: rgb(95, 126, 169);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 25rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+  /* transition: transform 0.4s ease; */
+}
+
+.box h2 {
+  font-size: 3.5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #222222cb;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 7.5rem;
+  border-radius: 10px;
+}
