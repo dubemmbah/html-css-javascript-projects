@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #06041b;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.kinetic {
+  /* background-color: #fff; */
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+}
+
+.kinetic::before,
+.kinetic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 5rem solid transparent;
+  border-bottom-color: #fff;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  animation: rotateA 1.5s linear infinite;
+}
+
+.kinetic::before {
+  transform: rotate(180deg);
+  animation: rotateB 1.5s linear infinite;
+}
+
+@keyframes rotateA {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  20% {
+    transform: rotate(120deg);
+  }
+
+  40% {
+    transform: rotate(180deg);
+  }
+
+  60% {
+    transform: rotate(240deg);
+  }
+
+  80% {
+    transform: rotate(300deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateB {
+  0% {
+    transform: rotate(240deg);
+  }
+
+  20% {
+    transform: rotate(300deg);
+  }
+
+  40% {
+    transform: rotate(360deg);
+  }
+
+  60% {
+    transform: rotate(420deg);
+  }
+
+  80% {
+    transform: rotate(480deg);
+  }
+
+  100% {
+    transform: rotate(540deg);
+  }
+}
