@@ -37,6 +37,6 @@ I welcome contributions to these projects. If you find a bug or have an idea for
 If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can find my contact information below:
 
 - Email: dubem.mbah@gmail.com
-- LinkedIn: linkedin.com/in/dubem-mbah
+- LinkedIn: https://linkedin.com/in/dubem-mbah
 
 Let's create amazing web experiences together!
