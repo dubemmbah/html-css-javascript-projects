@@ -6,23 +6,25 @@ This repository contains a collection of HTML, CSS, and JavaScript projects that
 1. Animated Navigation
 2. Background Slider
 3. Blurry Loading
-4. Dad Jokes
-5. Drink Water
-6. Event key code
-7. Expanding cards
-8. FAQ collapse
-9. Form input wave
-10. Hidden widget
-11. Increment counter
-12. Kinetic loader
-13. Movie app
-14. Progress steps
-15. Random choice picker
-16. Rotating navigation
-17. Scroll animation
-18. Sound board
-19. Split landing page
-20. Theme clock
+4. Button Ripple
+5. Dad Jokes
+6. Drink Water
+7. Event key code
+8. Expanding cards
+9. FAQ collapse
+10. Form input wave
+11. Hidden widget
+12. Increment counter
+13. Kinetic loader
+14. Movie app
+15. Progress steps
+16. Random choice picker
+17. Rotating navigation
+18. Scroll animation
+19. Sound board
+20. Split landing page
+21. Theme clock
+22. Weather App
 
 ## Getting Started
 
