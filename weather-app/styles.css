@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --bg-main: #0a1f44;
+  --text-light: #fff;
+  --text-med: #536276;
+  --text-dark: #1e2432;
+  --red: #ff1e42;
+  --dark-red: #c3112d;
+  --orange: #ff8c00;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(300deg, #ced1d6, #bfc0c0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 7rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* SECTION #1 */
+.top-banner {
+  color: var(--text-light);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.02rem;
+  padding: 0 0 3rem 0;
+}
+
+.top-banner form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.top-banner form input {
+  font-size: 2rem;
+  height: 4rem;
+  padding: 0.5rem 0.5rem 1rem;
+}
+
+.top-banner form input::placeholder {
+  color: currentColor;
+}
+
+.top-banner form button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
+  background-color: var(--bg-main);
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.top-banner form button:hover {
+  background-color: darkblue;
+}
+
+.top-banner form .msg {
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  max-width: 45rem;
+  min-width: 4rem;
+}
+
+/* SECTION #2 */
+.ajax-section {
+  margin: 7rem 0 2rem;
+}
+
+.ajax-section .cities {
+  display: grid;
+  grid-gap: 3.2rem 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ajax-section .city {
+  position: relative;
+  padding: 4rem 10%;
+  border-radius: 2rem;
+  background: var(--text-light);
+  color: var(--text-med);
+}
+
+.ajax-section .city::after {
+  content: "";
+  width: 90%;
+  height: 5rem;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 2rem;
+  background: var(--text-light);
+}
+
+.ajax-section figcaption {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.ajax-section .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: var(--text-dark);
+}
+
+.ajax-section .city sup {
+  font-size: 0.5rem;
+}
+
+.ajax-section .city-name sup {
+  padding: 0.2rem 0.6rem;
+  border-radius: 3rem;
+  color: var(--text-light);
+  background-color: var(--orange);
+}
+
+.ajax-section .city-icon {
+  margin-top: 1rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+/* PAGE FOOTER */
+.page-footer {
+  text-align: right;
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 4rem;
+}
+
+.page-footer span {
+  color: var(--red);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 100rem) {
+  body {
+    padding: 3rem;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 70rem) {
+  .heading,
+  .ajax-section,
+  .city-temp {
+    font-size: 3rem;
+  }
+
+  .ajax-section {
+    margin-top: 2rem;
+  }
+
+  .top-banner form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-banner form input,
+  .top-banner form button {
+    width: 100%;
+  }
+
+  .top-banner form button {
+    margin: 2rem 0 0 0;
+  }
+
+  .top-banner form .msg {
+    position: static;
+    max-width: none;
+    min-height: 0;
+    margin-top: 1rem;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* API KEY BANNER */
+.api {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.api a {
+  text-decoration: underline;
+}
+
+.api a:hover {
+  text-decoration: none;
+}
