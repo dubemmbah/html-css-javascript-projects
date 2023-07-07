@@ -1,9 +1,24 @@
 const textEl = document.getElementById("text"); // gets the element with the id 'text' and stores it in the variable 'textEl'
 const speedEl = document.getElementById("speed"); // gets the element with the id 'speed' and stores in the variable 'speedEl'
-const text = "Chukwudubem is an avid developer";
+const wordEl = document.getElementById("word");
+let text = wordEl.value;
 
 let index = 1;
 let speed = 300 / speedEl.value; // divides the current speedEl value by 300 which serves as speed
+
+wordEl.addEventListener("input", (e) => {
+  text = e.target.value;
+  restartAnimation(); // restarts the animation
+});
+
+wordEl.addEventListener("keydown", (e) => {
+  // bc by default, a form gets submitted when we hit the enter key, we have to prevent this behavior
+  if (e.key === "Enter") {
+    e.preventDefault();
+    wordEl.blur(); // Removes focus from the input field
+    wordEl.value = ""; // clears the input field after
+  }
+});
 
 writeText(); // hoisting the function
 
@@ -18,6 +33,10 @@ function writeText() {
   }
 
   setTimeout(writeText, speed); // calls the function at a set time i.e., every speed.value
+}
+
+function restartAnimation() {
+  index = 1;
 }
 
 speedEl.addEventListener("input", (e) => {
