@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+img {
+  width: 50rem;
+  height: 50rem;
+  object-fit: cover;
+}
+
+.carousel {
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  height: 53rem;
+  width: 50rem;
+  overflow: hidden; /* to prevent items from breaking out of the container */
+}
+
+.image-container {
+  display: flex;
+  transform: translateX(-25rem);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  width: 49.5%;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:focus {
+  outline: none;
+}
